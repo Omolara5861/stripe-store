@@ -19,13 +19,15 @@ import {MatBadgeModule} from '@angular/material/badge'
 import {MatSnackBarModule} from '@angular/material/snack-bar'
 import {MatListModule} from '@angular/material/list';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { HomeComponent } from './pages/home/home.component'
+import { HomeComponent } from './pages/home/home.component';
+import { ProductHeaderComponent } from './pages/home/components/product-header/product-header.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ProductHeaderComponent
   ],
   imports: [
     BrowserModule,
