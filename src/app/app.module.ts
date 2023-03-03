@@ -20,14 +20,16 @@ import {MatSnackBarModule} from '@angular/material/snack-bar'
 import {MatListModule} from '@angular/material/list';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductHeaderComponent } from './pages/home/components/product-header/product-header.component'
+import { ProductHeaderComponent } from './pages/home/components/product-header/product-header.component';
+import { FiltersComponent } from './pages/home/components/filters/filters.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ProductHeaderComponent
+    ProductHeaderComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
