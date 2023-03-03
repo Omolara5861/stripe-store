@@ -5,6 +5,6 @@ class="min-h-full max-w-7xl mx-auto border-x">
         <div>Filters</div>
     </mat-drawer>
     <mat-drawer-content class="p-6">
-        <app-product-header></app-product-header>
+        <app-product-header (columnsCountChange)="onUpdateColumnsCount($event)"></app-product-header>
     </mat-drawer-content>
 </mat-drawer-container>

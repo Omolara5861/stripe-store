@@ -5,5 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
+    cols = 3;
 
+    onUpdateColumnsCount(colsCount: number): void {
+      this.cols = colsCount;
+    }
 }
