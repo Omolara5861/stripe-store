@@ -18,12 +18,14 @@ import {MatTableModule} from '@angular/material/table'
 import {MatBadgeModule} from '@angular/material/badge'
 import {MatSnackBarModule} from '@angular/material/snack-bar'
 import {MatListModule} from '@angular/material/list';
-import { HeaderComponent } from './shared/components/header/header.component'
+import { HeaderComponent } from './shared/components/header/header.component';
+import { HomeComponent } from './pages/home/home.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
