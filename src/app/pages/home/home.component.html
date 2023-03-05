@@ -5,6 +5,34 @@ class="min-h-full max-w-7xl mx-auto border-x">
         <app-filters (showCategory)="onShowCategory($event)"></app-filters>
     </mat-drawer>
     <mat-drawer-content class="p-6">
-        <app-product-header (columnsCountChange)="onUpdateColumnsCount($event)"></app-product-header>
+        <app-product-header (columnsCountChange)="onUpdateColumnsCount($event)">
+        </app-product-header>
+
+        <!-- Product List -->
+        <mat-grid-list
+        gutterSize="16"
+        [cols]="cols"
+        [rowHeight]="rowHeight">
+
+        <mat-grid-tile>
+            <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+        </mat-grid-tile>
+
+        </mat-grid-list>
     </mat-drawer-content>
 </mat-drawer-container>
