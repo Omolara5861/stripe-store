@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-
-type Sort = 'desc' | 'asc';
+import { Sort } from '../../../../shared/components/header/model/types';
 
 @Component({
   selector: 'app-product-header',
