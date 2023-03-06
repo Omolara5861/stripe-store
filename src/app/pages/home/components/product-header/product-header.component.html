@@ -6,8 +6,8 @@
                 <mat-icon>expand_more</mat-icon>
             </button>
             <mat-menu #sortByMenu="matMenu">
-                <button mat-menu-item (onclick)="onSortUpdated('desc')">desc</button>
-                <button mat-menu-item (onclick)="onSortUpdated('asc')">asc</button>
+                <button mat-menu-item (click)="onSortUpdated('desc')">desc</button>
+                <button mat-menu-item (click)="onSortUpdated('asc')">asc</button>
             </mat-menu>
         </div>
         <div class="flex items-center">
@@ -17,9 +17,9 @@
                     <mat-icon>expand_more</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu">
-                    <button mat-menu-item (onclick)="onItemsUpdated(12)">12</button>
-                    <button mat-menu-item (onclick)="onItemsUpdated(24)">24</button>
-                    <button mat-menu-item (onclick)="onItemsUpdated(36)">36</button>
+                    <button mat-menu-item (click)="onItemsUpdated(12)">12</button>
+                    <button mat-menu-item (click)="onItemsUpdated(24)">24</button>
+                    <button mat-menu-item (click)="onItemsUpdated(36)">36</button>
                 </mat-menu>
             </div>
             <button (click)="onColumnsUpdated(1)">
