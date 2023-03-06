@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Cart } from '../../shared/models/cart';
 import { CartItem } from '../../shared/models/cart';
+import { CartService } from '../../shared/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -46,15 +47,17 @@ export class CartComponent {
     'action',
   ];
 
+  constructor(private cartService: CartService) {
+    
+  }
+
   /** Calculate the total price for the items in the cart */
   getTotal(items: CartItem[]): number {
-    return items
-    .map(item => item.price * item.quantity)
-    .reduce((sum, item) => sum + item, 0)
+    return this.cartService.getTotal(items);
   }
 
   /** */
   onClearCart(): void {
-
+    this.cartService.clearCart();
   }
 }
