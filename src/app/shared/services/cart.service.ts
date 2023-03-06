@@ -33,20 +33,16 @@ export class CartService {
   /**
    * Remove an item from the cart, update cart object, and emit it
    * @param item is the product to remove from cart
-   * @param updateCart stops the snackbar from displaying 2 notifications
    * @returns the remaining items in the cart without the one removed
    */
-  removeFromCart(item: CartItem, updateCart = true): CartItem[] {
+  removeFromCart(item: CartItem): CartItem[] {
     const filteredItems = this.cart.value.items.filter(
       _item => _item.id !== item.id
     );
-
-    if (updateCart) {
       this.cart.next({ items: filteredItems });
       this._snackBar.open("Item removed from cart.", "Ok", {
         duration: 3000,
       });
-    }
 
     return filteredItems;
   }
@@ -74,7 +70,7 @@ export class CartService {
 
     /** If there is an item for removal, the item is removed and the filtered items is updated */
     if (itemForRemoval) {
-      filteredItems = this.removeFromCart(itemForRemoval, true);
+      filteredItems = this.removeFromCart(itemForRemoval);
     }
 
     this.cart.next({ items: filteredItems });
