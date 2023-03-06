@@ -31,4 +31,13 @@ export class StoreService {
       }?sort=${sort}&limit=${limit}`
     );
   }
+
+  /** Fetches categories of products from @STORE_BASE_URL
+   * @returns an observable that emits categories that have been retrieved from the API
+  */
+  getAllCategories(): Observable<Array<string>> {
+    return this.httpClient.get<Array<string>>(
+      `${STORE_BASE_URL}/products/categories`
+    );
+  }
 }
