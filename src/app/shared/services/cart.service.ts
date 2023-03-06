@@ -37,4 +37,13 @@ export class CartService {
     .reduce((sum, item) => sum + item, 0)
   }
 
+  /** Remove all items in cart */
+  clearCart(): void {
+    this.cart.next({ items: [] });
+    this._snackBar.open('Cart has been cleared.', 'Ok', {
+      duration: 3000,
+    });
+  }
+
+
 }
