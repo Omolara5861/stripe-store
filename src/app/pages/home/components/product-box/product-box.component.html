@@ -2,7 +2,8 @@
     <div [ngClass]="{ flex: fullWidthMode }">
         <img class="mb-1 mx-auto h-[200px]"
         [src]="product.image"
-        [ngClass]="{ 'h-[200px]': !fullWidthMode, 'h-[360px]': fullWidthMode }"/>
+        [ngClass]="{ 'h-[200px]': !fullWidthMode,
+        'h-[360px] w-[240px]': fullWidthMode }"/>
         <div class="w-full"
         [ngClass]="{ 'px-8 flex flex-col justify-between': fullWidthMode }">
             <div>
