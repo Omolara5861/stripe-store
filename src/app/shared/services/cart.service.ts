@@ -30,4 +30,11 @@ export class CartService {
     this._snackBar.open('1 item added to cart.', 'Ok', { duration: 3000 });
   }
 
+  /** Calculate the total price for the items in the cart */
+  getTotal(items: CartItem[]): number {
+    return items
+    .map(item => item.price * item.quantity)
+    .reduce((sum, item) => sum + item, 0)
+  }
+
 }
