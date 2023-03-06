@@ -38,10 +38,19 @@ export class CartComponent implements OnInit{
     return this.cartService.getTotal(items);
   }
 
-  /** Remove @param item from cart */
-
+  /** Removes @param item from cart */
   onRemoveFromCart(item: CartItem): void {
     this.cartService.removeFromCart(item);
+  }
+
+  /** Increases quantity of an item. Runs the if statement from the service*/
+  onAddQuantity(item: CartItem) : void {
+    this.cartService.addToCart(item);
+  }
+
+  /** Increases quantity of an item. Runs the if statement from the service*/
+  onRemoveQuantity(item: CartItem) : void {
+    this.cartService.removeQuantity(item);
   }
 
   /** Clears cart*/
