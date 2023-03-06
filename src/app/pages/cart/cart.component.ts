@@ -7,20 +7,37 @@ import { CartItem } from '../../shared/models/cart';
   templateUrl: './cart.component.html'
 })
 export class CartComponent {
-//Items in cart
-  cart: Cart = {items: [{
-    product: 'string',
-    name: 'string',
-    price: 120,
-    quantity: 1,
-    id: 1
-  }]};
+  //Items in cart
+  cart: Cart={
+    items: [{
+      product: 'https://via.placeholder.com/150',
+      name: 'string',
+      price: 120,
+      quantity: 1,
+      id: 1
+    }]
+  };
 
   //Property to use in the table
-  dataSource: Array<CartItem> = [];
+  dataSource: Array<CartItem>=[
+    {
+      product: 'https://via.placeholder.com/150',
+      name: 'string',
+      price: 120,
+      quantity: 1,
+      id: 1
+    },
+    {
+      product: 'https://via.placeholder.com/150',
+      name: 'string',
+      price: 120,
+      quantity: 3,
+      id: 2
+    }
+  ];
 
   /** Items to display on the table */
-  displayedColumns: Array<string> = [
+  displayedColumns: Array<string>=[
     'product',
     'name',
     'price',
@@ -28,4 +45,16 @@ export class CartComponent {
     'total',
     'action',
   ];
+
+  /** Calculate the total price for the items in the cart */
+  getTotal(items: CartItem[]): number {
+    return items
+    .map(item => item.price * item.quantity)
+    .reduce((sum, item) => sum + item, 0)
+  }
+
+  /** */
+  onClearCart(): void {
+
+  }
 }
