@@ -5,7 +5,10 @@ class="min-h-full max-w-7xl mx-auto border-x">
         <app-filters (showCategory)="onShowCategory($event)"></app-filters>
     </mat-drawer>
     <mat-drawer-content class="p-6">
-        <app-product-header (columnsCountChange)="onUpdateColumnsCount($event)">
+        <app-product-header
+        (sortChange)="onSortChange($event)"
+        (itemsCountChange)="onItemsCountChange($event)"
+        (columnsCountChange)="onUpdateColumnsCount($event)">
         </app-product-header>
 
         <!-- Product List -->

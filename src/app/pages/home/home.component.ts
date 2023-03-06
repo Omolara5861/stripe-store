@@ -30,19 +30,38 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   getProductList() {
     this.productsSubscription = this.storeService
-    .getAllProducts(this.sort, this.count.toString())
+    .getAllProducts( this.count.toString(), this.sort)
     .subscribe((_products) => {
       this.products = _products;
     });
   }
 
+  /**
+   * Updates page layout
+   * @param colsCount is the number of columns to display the product list per row
+   */
     onUpdateColumnsCount(colsCount: number): void {
       this.cols = colsCount;
       this.rowHeight = ROW_HEIGHT[this.cols];
     }
 
+    /**
+     * Update the number of product to display
+     * @param count is the no of products to display
+     */
+    onItemsCountChange(newCount: number): void {
+      this.count = newCount;
+      this.getProductList();
+    }
+
+    onSortChange(newSort: string): void {
+      this.sort = newSort;
+      this.getProductList();
+    }
+
     onShowCategory(newCategory: string): void {
       this.category = newCategory;
+      this.getProductList();
     }
 
     onAddToCart(product: Product): void {
