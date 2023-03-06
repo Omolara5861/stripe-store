@@ -9,14 +9,7 @@ export class ProductBoxComponent {
   //Pass fullWidth property to the parent component home
   @Input() fullWidthMode = false;
 
-  product: Product | undefined = {
-    id: 1,
-    title: 'Sneakers',
-    price: 200,
-    category: 'shoes',
-    description: 'string',
-    image: 'https://via.placeholder.com/200'
-  }
+  @Input() product: Product | undefined;
 
   //Pass event to parent component
   @Output() addToCart = new EventEmitter<Product>();

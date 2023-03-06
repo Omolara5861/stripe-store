@@ -14,10 +14,12 @@ class="min-h-full max-w-7xl mx-auto border-x">
         [cols]="cols"
         [rowHeight]="rowHeight">
 
-        <mat-grid-tile>
+        <mat-grid-tile *ngFor="let product of products">
             <app-product-box class="w-full"
+            [product]="product"
             [fullWidthMode]="cols === 1"
-            (addToCart)="onAddToCart($event)"></app-product-box>
+            (addToCart)="onAddToCart($event)">
+            </app-product-box>
         </mat-grid-tile>
 
         </mat-grid-list>
