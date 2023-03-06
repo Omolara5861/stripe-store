@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cart } from '../../shared/models/cart';
-import { CartItem } from '../../shared/models/cart';
+import { Cart, CartItem } from '../../shared/models/cart';
 import { CartService } from '../../shared/services/cart.service';
 
 @Component({
@@ -39,7 +38,13 @@ export class CartComponent implements OnInit{
     return this.cartService.getTotal(items);
   }
 
-  /** */
+  /** Remove @param item from cart */
+
+  onRemoveFromCart(item: CartItem): void {
+    this.cartService.removeFromCart(item);
+  }
+
+  /** Clears cart*/
   onClearCart(): void {
     this.cartService.clearCart();
   }
