@@ -67,7 +67,7 @@ export class CartComponent implements OnInit{
         items: this.cart.items,
       })
       .subscribe(async (res: any) => {
-        let stripe = await loadStripe('your token');
+        let stripe = await loadStripe('pk_test_51MieJTExOuRzEOei2oSlqlyimsiPZgryXz8xRCnvB1sDY3VzAcyXugLBYz4ScjEIUGkFSwKwT3F01NdJwg1NcEkN00JwWuoYib');
         stripe?.redirectToCheckout({
           sessionId: res.id,
         });
