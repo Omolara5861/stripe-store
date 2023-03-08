@@ -74,8 +74,11 @@
 
 <!-- Displays this if there is no item in the cart -->
 <mat-card *ngIf="!cart.items.length" class="mx-auto my-3 max-w-7xl">
-    <p>
-        Your cart is empty.
-        <button mat-raised-button routerLink="/home">Start Shopping</button>
+    <div class="p-5 text-center">
+        <img src="assets/empty_cart.png" alt="An illustration of a girl holding an empty box and thinking" class="w-[500px] inline-block mb-5">
+    <p class="text-lg ">
+        Oops ... your cart is empty.
     </p>
+    <button mat-raised-button routerLink="/home">Start Shopping</button>
+    </div>
 </mat-card>
