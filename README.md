@@ -23,3 +23,53 @@ This is a full-stack e-commerce app built with Angular, Angular Material, Tailwi
 
 [View Project](https://stripestore.vercel.app "Live link")
 
+## Installation
+To install and run this project, you will need to have the following software installed on your computer:
+
+- Node.js
+- Angular CLI
+
+Once you have the required software installed, follow these steps to get started:
+
+1. Clone the repository on your local machine using the following command:
+
+```
+git clone https://github.com/Omolara5861/stripe-store.git
+```
+
+2. Navigate to the frontend directory and install the necessary dependencies using the following command:
+
+```
+cd client && npm i
+```
+
+3. Go back one directory by running the following command:
+```
+cd ..
+```
+
+4. Navigate to the backend directory and install the necessary dependencies using the following command:
+
+```
+cd server && npm i
+```
+
+## Usage
+### Running the Frontend
+
+To start the frontend, run the following command in the client directory:
+```
+ng serve
+```
+This will start the frontend on http://localhost:4200/.
+
+### Running the Backend
+
+To start the backend, navigate to the server folder and run the following command:
+
+```
+npm start
+```
+
+This will start the backend on http://localhost:4242/.
+
