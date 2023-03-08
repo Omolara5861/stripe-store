@@ -73,3 +73,20 @@ npm start
 
 This will start the backend on http://localhost:4242/.
 
+## Layout
+The app can be displayed in three different layouts: 1, 3, and 4 columns. To switch between layouts, use the `view` icons in the top right corner of the page.
+
+## Search and Sorting
+Users can search for products by category using the `categories'` menu at the side nave of the page. To sort products by ascending or descending order, click on the `sort by` dropdown above the product list. Users can also specify the number of products to display using the `show` dropdown menu above the product list.
+
+## Payment
+To make a purchase, add items to your cart and click the checkout button. You will be redirected to the Stripe payment gateway, where you can securely enter your credit or debit card details. Once the payment is processed, you will receive a confirmation email with details of your order.
+
+*Note: This app uses the Stripe test API keys, so no actual payments will be processed. To test the payment functionality, use the following test card details:*
+
+- Card Number: 4242 4242 4242 4242
+- Expiration Date: Any future date
+- CVC: Any 3-digit number
+- ZIP Code: Any 5-digit number
+
+
