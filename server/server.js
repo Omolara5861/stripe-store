@@ -79,13 +79,13 @@ app.post('/checkout', async (req, res, next) => {
             success_url: 'http://localhost:4242/success.html',
             cancel_url: 'http://localhost:4242/cancel.html'
         });
-        res.sendStatus(200).json(session);
-    } catch(err)
-    {
-        next(err)
+        res.status(200).json(session);
+    } catch {
+        err => next(err);
     }
 });
 
 const PORT = 4242;
 
-app.listen(PORT, console.log('App is running on port ' + PORT))
+app.listen(PORT, () => console.log('App is running on port ' + PORT));
+
