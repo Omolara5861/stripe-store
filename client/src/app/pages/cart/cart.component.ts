@@ -63,7 +63,7 @@ export class CartComponent implements OnInit{
   /** This method makes a post request to stripe to process users payment */
   onCheckout(): void {
     this.http
-      .post('http://localhost:4242/checkout', {
+      .post('https://stripe-store-server.onrender.com/checkout', {
         items: this.cart.items,
       })
       .subscribe(async (res: any) => {
