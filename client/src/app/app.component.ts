@@ -11,7 +11,7 @@ import { CartService } from './shared/services/cart.service';
   styles: []
 })
 export class AppComponent implements OnInit {
-  title = 'webstore';
+  title = 'Stripe Store';
 
   cart: Cart = {items: []};
 
