@@ -89,4 +89,14 @@ To make a purchase, add items to your cart and click the checkout button. You wi
 - CVC: Any 3-digit number
 - ZIP Code: Any 5-digit number
 
+## Technologies
+This project was built with VS Code using:
+- Angular
+- Angular Material
+- Tailwind CSS
+- Node / Express JS
+- Fakestore API
+- Stripe
 
+## Contributing
+If you would like to contribute to this project, please open an issue or submit a pull request on the project's GitHub repo. Contributions are welcome and appreciated.
