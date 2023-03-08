@@ -64,23 +64,26 @@ app.post('/checkout', async (req, res, next) => {
                     }
                 },
             ],
-            line_items: purchasedItems.map(item => ({
+            line_items: purchasedItems.map((item) => ({
                 price_data: {
                     currency: 'usd',
                     product_data: {
                         name: item.name,
-                        images: [item.product],
+                        images: [item.product]
                     },
-                    unit_amount: item.price * 100
+                    unit_amount: item.price * 100,
                 },
-                quantity: item.quantity
+                quantity: item.quantity,
             })),
             mode: 'payment',
             success_url: 'http://localhost:4242/success.html',
             cancel_url: 'http://localhost:4242/cancel.html'
-        })
+        });
         res.sendStatus(200).json(session);
-    } catch { error => next(error) };
+    } catch(err)
+    {
+        next(err)
+    }
 });
 
 const PORT = 4242;
