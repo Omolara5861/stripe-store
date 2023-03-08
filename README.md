@@ -16,3 +16,10 @@ This is a full-stack e-commerce app built with Angular, Angular Material, Tailwi
   - [Technologies](#technologies)
   - [Contributing](#contributing)
 
+## Preview
+
+![The homepage that shows where users can add product to cart](/client/src/assets/preview.png "Project Homepage")
+
+
+[View Project](https://stripestore.vercel.app "Live link")
+
