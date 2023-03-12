@@ -98,12 +98,16 @@ This app now includes local storage functionality, which means that users' cart 
 
 ## Technologies
 This project was built with VS Code using:
-- Angular
-- Angular Material
-- Tailwind CSS
-- Node / Express JS
+* __Frontend__<br/>
+      ![Angular](https://img.shields.io/badge/angular-%23E34F26.svg?style=for-the-badge&logo=angular&logoColor=white)
+      ![tailwindCss](https://img.shields.io/badge/tailwindCss-%231572B6.svg?style=for-the-badge&logo=tailwindCss&logoColor=white)
+      ![Angular Material](https://img.shields.io/badge/angular_material-%23323330.svg?style=for-the-badge&logo=angular&logoColor=%23F7DF1E)
+
+* __Backend__<br/>
+        ![Node JS](https://img.shields.io/badge/node.js-3670A0?style=for-the-badge&logo=node.js&logoColor=ffdd54)
+        ![Express JS](https://img.shields.io/badge/express_js-%23092E20.svg?style=for-the-badge&logo=express&logoColor=white)
+        ![Stripe](https://img.shields.io/badge/stripe-%23092E20.svg?style=for-the-badge&logo=stripe&logoColor=white)
 - Fakestore API
-- Stripe
 
 ## Contributing
 If you would like to contribute to this project, please open an issue or submit a pull request on the project's GitHub repo. Contributions are welcome and appreciated.
