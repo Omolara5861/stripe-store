@@ -6,13 +6,17 @@ This is a full-stack e-commerce app built with Angular, Angular Material, Tailwi
 
 ## Table of contents
 - [Stripe Store](#stripe-store)
+  - [Introduction](#introduction)
   - [Table of contents](#table-of-contents)
   - [Preview](#preview)
   - [Installation](#installation)
+  - [Usage](#usage)
+    - [Running the Frontend](#running-the-frontend)
+    - [Running the Backend](#running-the-backend)
   - [Layout](#layout)
   - [Search and Sorting](#search-and-sorting)
   - [Payment](#payment)
-  - [Usage](#usage)
+  - [Local Storage](#local-storage)
   - [Technologies](#technologies)
   - [Contributing](#contributing)
 
@@ -88,6 +92,9 @@ To make a purchase, add items to your cart and click the checkout button. You wi
 - Expiration Date: Any future date
 - CVC: Any 3-digit number
 - ZIP Code: Any 5-digit number
+
+## Local Storage
+This app now includes local storage functionality, which means that users' cart items will persist even if they close the browser or navigate away from the page. This is achieved using the browser's localStorage API.
 
 ## Technologies
 This project was built with VS Code using:
