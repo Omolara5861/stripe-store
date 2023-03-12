@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { BehaviorSubject } from "rxjs";
 import { Cart, CartItem } from "../models/cart";
+import { LocalStorageService } from './local-storage.service';
 
 @Injectable({
   providedIn: "root",
@@ -9,7 +10,11 @@ import { Cart, CartItem } from "../models/cart";
 export class CartService {
   /** @BehaviorSubject holds the initial item / items in cart and updates it with new item added to the cart. 'item === product'. Components can subscribe to it and update the UI subsequently */
   cart = new BehaviorSubject<Cart>({ items: [] });
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(private _snackBar: MatSnackBar, private localStorageService: LocalStorageService) {}
+
+  loadCart(): void {
+    this.cart.value.items = this.localStorageService.getItem('cart-items') ?? [];
+  }
 
   addToCart(item: CartItem): void {
     /** New items array destructured from the original items object in order not to alter it*/
@@ -22,6 +27,9 @@ export class CartService {
     } else {
       items.push(item);
     }
+    //Save items in cart to local storage
+    this.localStorageService.setItem('cart-items', items)
+
 
     /** Emit the items object so that every component that is subscribed to the cart can get the updated items */
     this.cart.next({ items });
@@ -44,6 +52,8 @@ export class CartService {
         duration: 3000,
       });
 
+    // Save the remaining items in cart to local storage.
+    this.localStorageService.setItem('cart-items', filteredItems);
     return filteredItems;
   }
 
@@ -89,6 +99,7 @@ export class CartService {
   /** Remove all items in cart */
   clearCart(): void {
     this.cart.next({ items: [] });
+    this.localStorageService.clear();
     this._snackBar.open("Cart has been cleared.", "Ok", {
       duration: 3000,
     });

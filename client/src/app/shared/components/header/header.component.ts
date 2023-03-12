@@ -11,7 +11,9 @@ export class HeaderComponent {
   private _cart: Cart = {items: []};
   itemsQuantity = 0;
 
-  constructor(private cartService: CartService){}
+  constructor(private cartService: CartService){
+    cartService.loadCart();
+  }
 
   /** Getters that returns the items in the cart */
   @Input() get cart(): Cart {
