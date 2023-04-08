@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { StoreService } from '../../../../shared/services/store.service';
 import { Subscription } from 'rxjs';
 
@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-filters',
   templateUrl: './filters.component.html'
 })
-export class FiltersComponent implements OnInit  {
+export class FiltersComponent implements OnInit, OnDestroy  {
   @Output() showCategory = new EventEmitter<string>();
 //List of categories to filter products
   categories!: string[];

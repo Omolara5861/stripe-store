@@ -66,8 +66,9 @@ export class CartComponent implements OnInit{
       .post('https://stripe-store-server.onrender.com/checkout', {
         items: this.cart.items,
       })
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .subscribe(async (res: any) => {
-        let stripe = await loadStripe('pk_test_51MieJTExOuRzEOei2oSlqlyimsiPZgryXz8xRCnvB1sDY3VzAcyXugLBYz4ScjEIUGkFSwKwT3F01NdJwg1NcEkN00JwWuoYib');
+        const stripe = await loadStripe('pk_test_51MieJTExOuRzEOei2oSlqlyimsiPZgryXz8xRCnvB1sDY3VzAcyXugLBYz4ScjEIUGkFSwKwT3F01NdJwg1NcEkN00JwWuoYib');
         stripe?.redirectToCheckout({
           sessionId: res.id,
         });

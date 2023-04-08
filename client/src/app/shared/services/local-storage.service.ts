@@ -1,12 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalStorageService {
-
-  constructor() { }
-
   /**
    *Saves @param value to local storage under the name @param key
    * @param key is a string that represents the key or name under which the data will be stored in the local storage
