@@ -114,7 +114,10 @@ This project was built with VS Code using:
         ![Express JS](https://img.shields.io/badge/express_js-%23092E20.svg?style=for-the-badge&logo=express&logoColor=white)
         ![Stripe](https://img.shields.io/badge/stripe-%23092E20.svg?style=for-the-badge&logo=stripe&logoColor=white)
         ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
-- Fakestore API
+**Fakestore API**
+- **Project Management and Version Control:** <br />
+  ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+  ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 ## Contributing
 If you would like to contribute to this project, please open an issue or submit a pull request on the project's GitHub repo. Contributions are welcome and appreciated.
