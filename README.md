@@ -104,14 +104,16 @@ This app now includes local storage functionality, which means that users' cart 
 ## Technologies
 This project was built with VS Code using:
 * __Frontend__<br/>
-      ![Angular](https://img.shields.io/badge/angular-%23E34F26.svg?style=for-the-badge&logo=angular&logoColor=white)
-      ![tailwindCss](https://img.shields.io/badge/tailwindCss-%231572B6.svg?style=for-the-badge&logo=tailwindCss&logoColor=white)
+      ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+      ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
       ![Angular Material](https://img.shields.io/badge/angular_material-%23323330.svg?style=for-the-badge&logo=angular&logoColor=%23F7DF1E)
+      ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
 * __Backend__<br/>
         ![Node JS](https://img.shields.io/badge/node.js-3670A0?style=for-the-badge&logo=node.js&logoColor=ffdd54)
         ![Express JS](https://img.shields.io/badge/express_js-%23092E20.svg?style=for-the-badge&logo=express&logoColor=white)
         ![Stripe](https://img.shields.io/badge/stripe-%23092E20.svg?style=for-the-badge&logo=stripe&logoColor=white)
+        ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
 - Fakestore API
 
 ## Contributing
